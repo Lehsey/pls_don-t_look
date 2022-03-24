@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Main_menu : Form
+    {
+        private Game_field GameField;
+        public Main_menu()
+        {
+            InitializeComponent();
+        }
+
+
+        private void Start_button_Click(object sender, EventArgs e)
+        {
+            GameField = new Game_field();
+            GameField.Show();
+
+        }
+
+        private void Score_button_Click(object sender, EventArgs e)
+        {
+        }
+    }
+}

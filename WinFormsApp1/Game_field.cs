@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Game_field : Form
     {
-        public Form1()
+        public Game_field()
         {
             InitializeComponent();
         }
-
     }
 }
