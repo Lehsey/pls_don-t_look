@@ -12,7 +12,7 @@ namespace WinFormsApp1
 {
     public partial class Main_menu : Form
     {
-        private Game_field GameField;
+        private Game_Window GameField;
         public Main_menu()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace WinFormsApp1
 
         private void Start_button_Click(object sender, EventArgs e)
         {
-            GameField = new Game_field();
+            GameField = new Game_Window(4, 4);
             GameField.Show();
 
         }
