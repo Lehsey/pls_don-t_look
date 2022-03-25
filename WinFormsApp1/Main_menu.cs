@@ -21,8 +21,19 @@ namespace WinFormsApp1
 
         private void Start_button_Click(object sender, EventArgs e)
         {
-            GameField = new Game_Window(4, 4);
-            GameField.Show();
+            int width, height;
+            try
+            {
+                width = Convert.ToInt32(Width_input.Text);
+                height = Convert.ToInt32(Height_input.Text);
+                GameField = new Game_Window(width, height);
+                GameField.Show();
+
+            }
+            catch
+            {
+
+            }
 
         }
 

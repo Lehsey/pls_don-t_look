@@ -18,7 +18,7 @@ namespace WinFormsApp1
         private int Rare_value_gen = 4;
         private Button[,] Tiles;
         private int TILE_INTERVALS = 10;
-        private Size NORMAL_TILE_SIZE = new Size(50, 50);
+        private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private Size NORMAL_FORM_SIZE = new Size(300, 500);
         private int BORDER_INTERVAL = 10;
         private int a;
@@ -32,16 +32,31 @@ namespace WinFormsApp1
             Width = _Width;
             Height = _Height;
             InitializeComponent();
-            GameField.Size = new Size(Width * (NORMAL_TILE_SIZE.Width + TILE_INTERVALS), Height * (NORMAL_TILE_SIZE.Height + TILE_INTERVALS));
-            GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL);
+            GameField.Size = new Size(Width * (NORMAL_TILE_SIZE.Width + TILE_INTERVALS) + TILE_INTERVALS , Height * (NORMAL_TILE_SIZE.Height + TILE_INTERVALS));
             CreateField();
-
+            this.Size = new Size(TILE_INTERVALS * 4 + GameField.Width, TILE_INTERVALS * 3 + GameField.Width + Restart_button.Width);
+            GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
 
         }
 
         private void CreateField()
         {
+            Point location = new Point(TILE_INTERVALS, TILE_INTERVALS);
             Tiles = CreateTiles(Width, Height);
+            for (int i = 0; i < Width; i++)
+            {
+                for (int j = 0; j < Height; j++)
+                {
+                    Tiles[i, j].Location = location;
+                    Tiles[i, j].Name = "Tile" + i + j;
+                    this.GameField.Controls.Add(Tiles[i, j]);
+                    location.X += TILE_INTERVALS + NORMAL_TILE_SIZE.Width;
+                }
+                location.X = TILE_INTERVALS;
+                location.Y += TILE_INTERVALS + NORMAL_TILE_SIZE.Height;
+                
+            }
+            
         }
         private Button[,] CreateTiles(int tile_width_count, int tile_heght_count)
         {
@@ -52,7 +67,7 @@ namespace WinFormsApp1
                 {
                     field_tiles[i, j] = new Button()
                     {
-                        Size = NORMAL_FORM_SIZE
+                        Size = NORMAL_TILE_SIZE
                     };
                 }
             }

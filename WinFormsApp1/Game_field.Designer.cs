@@ -31,6 +31,8 @@ namespace WinFormsApp1
         {
             this.GameField = new System.Windows.Forms.Panel();
             this.Restart_button = new System.Windows.Forms.Button();
+            this.Cur_score = new System.Windows.Forms.Button();
+            this.Max_score = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GameField
@@ -43,12 +45,30 @@ namespace WinFormsApp1
             // 
             // Restart_button
             // 
-            this.Restart_button.Location = new System.Drawing.Point(13, 13);
+            this.Restart_button.Location = new System.Drawing.Point(10, 10);
             this.Restart_button.Name = "Restart_button";
-            this.Restart_button.Size = new System.Drawing.Size(125, 91);
+            this.Restart_button.Size = new System.Drawing.Size(125, 90);
             this.Restart_button.TabIndex = 1;
             this.Restart_button.Text = "Restart";
             this.Restart_button.UseVisualStyleBackColor = true;
+            // 
+            // Cur_score
+            // 
+            this.Cur_score.Location = new System.Drawing.Point(210, 10);
+            this.Cur_score.Name = "Cur_score";
+            this.Cur_score.Size = new System.Drawing.Size(125, 90);
+            this.Cur_score.TabIndex = 2;
+            this.Cur_score.Text = "Current score\r\n0\r\n";
+            this.Cur_score.UseVisualStyleBackColor = true;
+            // 
+            // Max_score
+            // 
+            this.Max_score.Location = new System.Drawing.Point(341, 10);
+            this.Max_score.Name = "Max_score";
+            this.Max_score.Size = new System.Drawing.Size(125, 90);
+            this.Max_score.TabIndex = 3;
+            this.Max_score.Text = "Max score\r\n0\r\n";
+            this.Max_score.UseVisualStyleBackColor = true;
             // 
             // Game_Window
             // 
@@ -56,10 +76,12 @@ namespace WinFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(478, 475);
+            this.Controls.Add(this.Max_score);
+            this.Controls.Add(this.Cur_score);
             this.Controls.Add(this.Restart_button);
             this.Controls.Add(this.GameField);
             this.Name = "Game_Window";
-            this.Text = "Game_field";
+            this.Text = "2048";
             this.ResumeLayout(false);
 
         }
@@ -68,5 +90,7 @@ namespace WinFormsApp1
 
         private System.Windows.Forms.Panel GameField;
         private System.Windows.Forms.Button Restart_button;
+        private System.Windows.Forms.Button Cur_score;
+        private System.Windows.Forms.Button Max_score;
     }
 }
