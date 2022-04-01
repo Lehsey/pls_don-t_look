@@ -7,8 +7,7 @@
     },
     "additionalProbingPaths": [
       "C:\\Users\\Lahas\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Lahas\\.nuget\\packages",
-      "G:\\VSShared\\NuGetPackages"
+      "C:\\Users\\Lahas\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
