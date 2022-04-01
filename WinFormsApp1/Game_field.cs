@@ -14,14 +14,11 @@ namespace WinFormsApp1
     {
         private int Width, Height;
         private int Curr_score, Best_score;
-        private int Common_value_gen = 2;
-        private int Rare_value_gen = 4;
         private Button[,] Tiles;
         private int TILE_INTERVALS = 10;
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private Size NORMAL_FORM_SIZE = new Size(300, 500);
         private int BORDER_INTERVAL = 10;
-        private int a;
 
         public Game_Window(int _Width, int _Height)
         {
@@ -58,10 +55,10 @@ namespace WinFormsApp1
             }
             
         }
-        private Button[,] CreateTiles(int tile_width_count, int tile_heght_count)
+        private Button[,] CreateTiles(int tile_width_count, int tile_height_count)
         {
-            Button[,] field_tiles = new Button[Width, Height];
-            for (int i = 0; i < tile_width_count; i++)
+            Button[,] field_tiles = new Button[Height, Width];
+            for (int i = 0; i < tile_height_count; i++)
             {
                 for(int j = 0; j < tile_width_count; j++)
                 {
