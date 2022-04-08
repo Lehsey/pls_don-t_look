@@ -23,10 +23,41 @@ namespace WinFormsApp1
             {
                 for (int j = 0; j < Width; j++)
                 {
-
+                    Bloks[i, j] = 0;
                 }
             }
+            Generate_new_blok();
         }
+
+        private void Generate_new_blok()
+        {
+            System.Random rnd = new System.Random();
+            int i, j, value;
+            i = rnd.Next(0, this.Height - 1);
+            j = rnd.Next(0, this.Width - 1);
+            while (this.Bloks[i, j] != 0)
+            {
+                i = rnd.Next(0, this.Height - 1);
+                j = rnd.Next(0, this.Width - 1);
+            }
+
+            if (rnd.Next(0, 10) == 1)
+            {
+                this.Bloks[i,j] = this.Rare_value_gen;
+            }
+            else
+            {
+                this .Bloks[i,j] = this.Common_value_gen;
+            }
+
+        }
+
+        public void move_up()
+        {
+            
+        }
+
+
 
 
     }
