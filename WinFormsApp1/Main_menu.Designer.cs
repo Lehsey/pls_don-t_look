@@ -29,7 +29,6 @@ namespace WinFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.Start_button = new System.Windows.Forms.Button();
             this.Score_button = new System.Windows.Forms.Button();
             this.Height_input = new System.Windows.Forms.TextBox();
@@ -110,8 +109,6 @@ namespace WinFormsApp1
         }
 
         #endregion
-
-        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Button Start_button;
         private System.Windows.Forms.Button Score_button;
         private System.Windows.Forms.TextBox Height_input;
