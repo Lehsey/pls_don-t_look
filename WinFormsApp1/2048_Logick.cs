@@ -41,7 +41,7 @@ namespace WinFormsApp1
         private void Generate_new_blok()
         {
             System.Random rnd = new System.Random();
-            int i, j, value;
+            int i, j;
             i = rnd.Next(0, Height - 1);
             j = rnd.Next(0, Width - 1);
             while (Bloks[i, j] != 0)
