@@ -13,6 +13,7 @@ namespace WinFormsApp1
         private int Common_value_gen = 2;
         private int Rare_value_gen = 4;
         private int Session_score = 0;
+        private int Best_score = 0;
 
         private Logick(int _width, int _height)
         {
@@ -37,6 +38,13 @@ namespace WinFormsApp1
         public int GetScore()
         {
             return Session_score;
+        }
+        public void GetBestScore()
+        {
+            if (Session_score > Best_score)
+            {
+                Best_score = Session_score;
+            }
         }
         private void Generate_new_blok()
         {
