@@ -49,11 +49,13 @@ namespace WinFormsApp1
             this.Restart_button.Name = "Restart_button";
             this.Restart_button.Size = new System.Drawing.Size(125, 90);
             this.Restart_button.TabIndex = 1;
+            this.Restart_button.TabStop = false;
             this.Restart_button.Text = "Restart";
             this.Restart_button.UseVisualStyleBackColor = true;
             // 
             // Cur_score
             // 
+            this.Cur_score.Enabled = false;
             this.Cur_score.Location = new System.Drawing.Point(210, 10);
             this.Cur_score.Name = "Cur_score";
             this.Cur_score.Size = new System.Drawing.Size(125, 90);
@@ -63,6 +65,7 @@ namespace WinFormsApp1
             // 
             // Max_score
             // 
+            this.Max_score.Enabled = false;
             this.Max_score.Location = new System.Drawing.Point(341, 10);
             this.Max_score.Name = "Max_score";
             this.Max_score.Size = new System.Drawing.Size(125, 90);
@@ -82,6 +85,7 @@ namespace WinFormsApp1
             this.Controls.Add(this.GameField);
             this.Name = "Game_Window";
             this.Text = "2048";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_Window_KeyDown);
             this.ResumeLayout(false);
 
         }
@@ -89,8 +93,8 @@ namespace WinFormsApp1
         #endregion
 
         private System.Windows.Forms.Panel GameField;
-        private System.Windows.Forms.Button Restart_button;
         private System.Windows.Forms.Button Cur_score;
         private System.Windows.Forms.Button Max_score;
+        protected System.Windows.Forms.Button Restart_button;
     }
 }

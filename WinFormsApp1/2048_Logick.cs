@@ -13,9 +13,9 @@ namespace WinFormsApp1
         private int Common_value_gen = 2;
         private int Rare_value_gen = 4;
         private int Session_score = 0;
-        private int Best_score = 0;
 
-        private Logick(int _width, int _height)
+
+        public Logick(int _width, int _height)
         {
             Width = _width;
             Height = _height;
@@ -39,13 +39,7 @@ namespace WinFormsApp1
         {
             return Session_score;
         }
-        public void GetBestScore()
-        {
-            if (Session_score > Best_score)
-            {
-                Best_score = Session_score;
-            }
-        }
+
         private void Generate_new_blok()
         {
             System.Random rnd = new System.Random();
@@ -148,9 +142,9 @@ namespace WinFormsApp1
 
         private void move_down()
         {
-            for (int j = 0; j < Width ; j--)
+            for (int j = 0; j < Width ; j++)
             {
-                for (int i = Height - 1; i > 0; i++)
+                for (int i = Height - 1; i > 0; i--)
                 {
                     if (Bloks[i - 1, j] == Bloks[i, j])
                     {

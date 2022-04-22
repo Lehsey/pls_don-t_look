@@ -18,6 +18,8 @@ namespace WinFormsApp1
         private int TILE_INTERVALS = 10;
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private int BORDER_INTERVAL = 10;
+        private Logick logick;
+
 
         public Game_Window(int _Width, int _Height)
         {
@@ -27,12 +29,54 @@ namespace WinFormsApp1
             }
             Width = _Width;
             Height = _Height;
+            logick = new Logick(Width, Height);
             InitializeComponent();
             GameField.Size = new Size(Width * (NORMAL_TILE_SIZE.Width + TILE_INTERVALS) + TILE_INTERVALS, Height * (NORMAL_TILE_SIZE.Height + TILE_INTERVALS) + TILE_INTERVALS);
             CreateField();
             this.Size = new Size(TILE_INTERVALS * 4 + GameField.Width, TILE_INTERVALS * 8 + GameField.Height + Restart_button.Height);
             GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
+            UpdateField();
+            
+        }
 
+        private void UpdateField()
+        {
+            int[,] logick_block = logick.Get_Bloks();
+            for (int i = 0; i < Height; i++)
+            {
+                for (int j = 0; j < Width; j++)
+                {
+                    if (logick_block[i,j] == 0)
+                    {
+                        Tiles[i, j].Text = "";
+                    }
+                    else
+                    {
+                        Tiles[i, j].Text = logick_block[i, j].ToString();
+                    }
+                }
+            }
+        }
+
+        private void Game_Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.S)
+            {
+                logick.try_move(false, true, false, false);
+            }
+            else if (e.KeyCode == Keys.W)
+            {
+                logick.try_move(true, false, false, false);
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+                logick.try_move(false, false, true, true);
+            }
+            else if (e.KeyCode== Keys.D)
+            {
+                logick.try_move(false, false, false, true);
+            }
+            UpdateField();
         }
 
         private void CreateField()
@@ -45,6 +89,7 @@ namespace WinFormsApp1
                 {
                     Tiles[i, j].Location = location;
                     Tiles[i, j].Name = "Tile" + i + j;
+                    Tiles[i, j].Enabled = false;
                     this.GameField.Controls.Add(Tiles[i, j]);
                     location.X += TILE_INTERVALS + NORMAL_TILE_SIZE.Width;
                 }
