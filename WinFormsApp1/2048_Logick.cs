@@ -19,7 +19,7 @@ namespace WinFormsApp1
         {
             Width = _width;
             Height = _height;
-            Bloks = new int[Width, Height];
+            Bloks = new int[Height, Width];
             for (int i = 0; i < Height; i++)
             {
                 for (int j = 0; j < Width; j++)
@@ -44,12 +44,12 @@ namespace WinFormsApp1
         {
             System.Random rnd = new System.Random();
             int i, j;
-            i = rnd.Next(0, Height - 1);
-            j = rnd.Next(0, Width - 1);
+            i = rnd.Next(0, Height);
+            j = rnd.Next(0, Width);
             while (Bloks[i, j] != 0)
             {
-                i = rnd.Next(0, Height - 1);
-                j = rnd.Next(0, Width - 1);
+                i = rnd.Next(0, Height);
+                j = rnd.Next(0, Width);
             }
 
             if (rnd.Next(0, 10) == 1)
@@ -103,7 +103,7 @@ namespace WinFormsApp1
             return false;
         }
 
-        private bool Game_over()
+        public bool Game_over()
         {
             for (int i = 0; i < Height - 1; i++)
             {
@@ -118,23 +118,51 @@ namespace WinFormsApp1
             return true;
         }
 
+        private int finde_zero_col(int col)
+        {
+            for (int i = 0; i < Height; i++)
+            {
+                if (Bloks[i, col] == 0)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        private int finde_val_col(int col)
+        {
+            for (int i = 0; i < Height; i++)
+            {
+                if (Bloks[i, col] != 0)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
 
         private void move_up()
         {
             for (int j = 0; j < Width; j++)
             {
-                for (int i = 0; i < Height - 1; i++)
+                int val = finde_val_col(j);
+            }
+
+                for (int j = 0; j < Width; j++)
+            {
+                int zero = finde_zero_col(j);
+                for (int i = 0; i < Height; i++)
                 {
-                    if (Bloks[i + 1,j] == Bloks[i, j])
+                    if (zero == -1)
                     {
-                        Bloks[i, j] *= 2;
-                        Session_score += Bloks[i, j];
-                        Bloks[i + 1, j] = 0;
+                        break;
                     }
-                    else if (Bloks[i, j] == 0)
+                    if ((Bloks[i,j] != 0)| zero < i)
                     {
-                        Bloks[i, j] = Bloks[i + 1, j];
-                        Bloks[i + 1, j] = 0;
+                        Bloks[zero,j] = Bloks[i,j];
+                        Bloks[i, j] = 0;
+                        zero = finde_zero_col(j);
                     }
                 }
             }
@@ -142,65 +170,18 @@ namespace WinFormsApp1
 
         private void move_down()
         {
-            for (int j = 0; j < Width ; j++)
-            {
-                for (int i = Height - 1; i > 0; i--)
-                {
-                    if (Bloks[i - 1, j] == Bloks[i, j])
-                    {
-                        Bloks[i, j] *= 2;
-                        Session_score += Bloks[i, j];
-                        Bloks[i - 1, j] = 0;
-                    }
-                    else if (Bloks[i, j] == 0)
-                    {
-                        Bloks[i, j] = Bloks[i - 1, j];
-                        Bloks[i - 1, j] = 0;
-                    }
-                }
-            }
+            
         }
 
         private void move_left()
         {
-            for (int i = 0; i < Height; i++)
-            {
-                for (int j = 0; j < Width - 1; j++)
-                {
-                    if (Bloks[i, j + 1] == Bloks [i, j])
-                    {
-                        Bloks[i, j] *= 2;
-                        Bloks[i, j + 1] = 0;
-                        Session_score += Bloks[i, j];
-                    }
-                    else if (Bloks[i, j] == 0)
-                    {
-                        Bloks[i, j] = Bloks[i, j + 1];
-                        Bloks[i, j] = 0;
-                    }
-                }
-            }
+            
         }
 
         private void move_right()
         {
-            for (int i = 0; i < Height; i++)
-            {
-                for (int j = Width - 1; j > 0; j--)
-                {
-                    if (Bloks[i, j - 1] == Bloks[i, j])
-                    {
-                        Bloks[i, j] *= 2;
-                        Bloks[i, j - 1] = 0;
-                        Session_score += Bloks[i, j];
-                    }
-                    else if (Bloks[i, j] == 0)
-                    {
-                        Bloks[i, j] = Bloks[i, j - 1];
-                        Bloks[i, j] = 0;
-                    }
-                }
-            }
+          
+        
         }
     }
 }
