@@ -3,7 +3,7 @@
     "additionalProbingPaths": [
       "C:\\Users\\Lahas\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Lahas\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "G:\\VSShared\\NuGetPackages"
     ]
   }
 }

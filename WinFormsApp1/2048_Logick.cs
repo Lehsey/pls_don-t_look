@@ -118,21 +118,9 @@ namespace WinFormsApp1
             return true;
         }
 
-        private int finde_zero_col(int col)
+        private int find_val_in_col(int col, int start)
         {
-            for (int i = 0; i < Height; i++)
-            {
-                if (Bloks[i, col] == 0)
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        private int finde_val_col(int col)
-        {
-            for (int i = 0; i < Height; i++)
+            for (int i = start; i < Height; i++)
             {
                 if (Bloks[i, col] != 0)
                 {
@@ -142,30 +130,70 @@ namespace WinFormsApp1
             return -1;
         }
 
+        private int find_zero_in_col(int col, int start)
+        {
+            for (int i = start; i < Height; i++)
+            {
+                if (Bloks[i, col] == 0)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         private void move_up()
         {
+            int old_pos;
+            int last_free_space;
             for (int j = 0; j < Width; j++)
             {
-                int val = finde_val_col(j);
-            }
-
-                for (int j = 0; j < Width; j++)
-            {
-                int zero = finde_zero_col(j);
+                old_pos = find_val_in_col(j, 0);
                 for (int i = 0; i < Height; i++)
                 {
-                    if (zero == -1)
+                    if (old_pos == -1)
                     {
                         break;
                     }
-                    if ((Bloks[i,j] != 0)| zero < i)
+
+                    if ((i == old_pos) | (i < old_pos))
                     {
-                        Bloks[zero,j] = Bloks[i,j];
+                        continue;
+                    }
+
+                    if (Bloks[i, j] == Bloks[old_pos, j])
+                    {
+                        Bloks[old_pos, j] *= 2;
+                        Session_score += Bloks[old_pos, j];
                         Bloks[i, j] = 0;
-                        zero = finde_zero_col(j);
+                        old_pos = find_val_in_col(j, i);
+                    }
+                    else if ((Bloks[i, j] != Bloks[old_pos, j]) && (Bloks[i, j] != 0))
+                    {
+                        old_pos = i;
                     }
                 }
             }
+
+            for (int j = 0; j < Width; j++)
+            {
+                last_free_space = find_zero_in_col(j, 0);
+                for(int i = 0; i < Height; i++)
+                {
+                    if (last_free_space == -1)
+                    {
+                        break;
+                    }
+
+                    if ((Bloks[i, j] != 0) && (last_free_space < i))
+                    {
+                        Bloks[last_free_space, j] = Bloks[i, j];
+                        Bloks[i, j] = 0;
+                        last_free_space = find_zero_in_col(j, last_free_space);
+                    }
+                }
+            }
+
         }
 
         private void move_down()
