@@ -14,7 +14,7 @@
         "outputPath": "C:\\Users\\Lahas\\YandexDisk\\!УНИВЕР\\Codes\\pls_don-t_look\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "G:\\VSShared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Lahas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }
