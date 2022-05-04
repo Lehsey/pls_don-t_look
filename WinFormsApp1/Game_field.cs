@@ -35,6 +35,7 @@ namespace WinFormsApp1
             CreateField();
             this.Size = new Size(TILE_INTERVALS * 4 + GameField.Width, TILE_INTERVALS * 8 + GameField.Height + Restart_button.Height);
             GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
+            this.KeyPreview = true;
             UpdateField();
             
         }
@@ -78,6 +79,16 @@ namespace WinFormsApp1
             }
             UpdateField();
         }
+
+        private void Restart_button_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RestartField()
+        {
+        }
+
 
         private void CreateField()
         {

@@ -39,6 +39,7 @@ namespace WinFormsApp1
 
         private void Score_button_Click(object sender, EventArgs e)
         {
+
         }
     }
 }
