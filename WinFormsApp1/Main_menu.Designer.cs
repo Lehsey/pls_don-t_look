@@ -63,6 +63,7 @@ namespace WinFormsApp1
             this.Height_input.Name = "Height_input";
             this.Height_input.Size = new System.Drawing.Size(32, 27);
             this.Height_input.TabIndex = 2;
+            this.Height_input.Text = "4";
             // 
             // Width_input
             // 
@@ -70,6 +71,7 @@ namespace WinFormsApp1
             this.Width_input.Name = "Width_input";
             this.Width_input.Size = new System.Drawing.Size(32, 27);
             this.Width_input.TabIndex = 3;
+            this.Width_input.Text = "4";
             // 
             // label1
             // 
