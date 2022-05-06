@@ -13,9 +13,10 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        private string score;
         public Form1(int _score)
         {
-            int score = _score;
+            score = Convert.ToString(_score);
             InitializeComponent();
         }
 
@@ -23,8 +24,10 @@ namespace WinFormsApp1
         {
             string name;
             name = Convert.ToString(Name_input.Text);
-            StreamWriter f = new StreamWriter("Scores_list.txt");
-            f.WriteLine(name);
+            File.AppendAllText("Scores_list.txt", name + " ");
+            File.AppendAllText("Scores_list.txt", score);
+            File.AppendAllText("Scores_list.txt", "\r\n");
+            Close();
         }
     }
 }

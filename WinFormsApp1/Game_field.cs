@@ -13,7 +13,6 @@ namespace WinFormsApp1
     public partial class Game_Window : Form
     {
         private int Width, Height;
-        private int Curr_score, Best_score;
         private Button[,] Tiles;
         private int TILE_INTERVALS = 10;
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
