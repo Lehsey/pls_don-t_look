@@ -78,6 +78,11 @@ namespace WinFormsApp1
                 logick.try_move(false, false, false, true);
             }
             UpdateField();
+            if (logick.Game_over() == true)
+            {
+                Form1 newForm = new Form1();
+                newForm.Show();
+            }
         }
 
         private void Restart_button_Click(object sender, EventArgs e)
