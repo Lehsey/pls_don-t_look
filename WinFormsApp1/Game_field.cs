@@ -80,7 +80,7 @@ namespace WinFormsApp1
             UpdateField();
             if (logick.Game_over() == true)
             {
-                Form1 newForm = new Form1();
+                Form1 newForm = new Form1(logick.GetScore());
                 newForm.Show();
             }
         }
