@@ -23,7 +23,7 @@ namespace WinFormsApp1
 
         public Game_Window(int _Width, int _Height)
         {
-            if (_Width < 2 || _Height < 2)
+            if (_Width < 4 || _Height < 4)
             {
                 return;
             }

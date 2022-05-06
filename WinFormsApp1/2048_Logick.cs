@@ -109,7 +109,7 @@ namespace WinFormsApp1
             {
                 for (int j = 0; j < Width - 1; j++)
                 {
-                    if ((Bloks[i,j] == Bloks[i, j + 1]) | (Bloks[i, j] == Bloks[i + 1, j]) | (Bloks[i, j] == 0) | (Bloks[i + 1, j] == 0) | (Bloks[i, j +1] == 0))
+                    if ((!Free_space()) && ((Bloks[i,j] != Bloks[i + 1, j]) && (Bloks[i, j] != Bloks[i + 1, j])) )
                     {
                         return false;
                     }
