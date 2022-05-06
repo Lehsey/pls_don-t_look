@@ -35,46 +35,6 @@ namespace WinFormsApp1
 
         }
 
-<<<<<<< Updated upstream
-=======
-        private void Game_Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.S)
-            {
-                logick.try_move(false, true, false, false);
-            }
-            else if (e.KeyCode == Keys.W)
-            {
-                logick.try_move(true, false, false, false);
-            }
-            else if (e.KeyCode == Keys.A)
-            {
-                logick.try_move(false, false, true, true);
-            }
-            else if (e.KeyCode== Keys.D)
-            {
-                logick.try_move(false, false, false, true);
-            }
-            UpdateField();
-            ScoreOutput();
-            if (logick.Game_over() == true)
-            {
-                Form1 newForm = new Form1(logick.GetScore());
-                newForm.Show();
-            }
-        }
-
-        private void Restart_button_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void RestartField()
-        {
-        }
-
-
->>>>>>> Stashed changes
         private void CreateField()
         {
             Point location = new Point(TILE_INTERVALS, TILE_INTERVALS);
@@ -110,12 +70,6 @@ namespace WinFormsApp1
 
 
             return field_tiles;
-        }
-
-        private void ScoreOutput()
-        {
-            string a = Convert.ToString(logick.GetScore());
-            Cur_score.Text = a;
         }
 
     }
