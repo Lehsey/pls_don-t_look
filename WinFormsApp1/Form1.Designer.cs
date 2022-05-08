@@ -46,23 +46,24 @@ namespace WinFormsApp1
             // 
             // Name_input
             // 
+            this.Name_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Name_input.Location = new System.Drawing.Point(88, 100);
             this.Name_input.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name_input.Name = "Name_input";
-            this.Name_input.Size = new System.Drawing.Size(273, 23);
+            this.Name_input.Size = new System.Drawing.Size(273, 24);
             this.Name_input.TabIndex = 4;
-            this.Name_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Enter_button
             // 
+            this.Enter_button.BackColor = System.Drawing.Color.Pink;
             this.Enter_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Enter_button.Location = new System.Drawing.Point(178, 125);
+            this.Enter_button.Location = new System.Drawing.Point(151, 128);
             this.Enter_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Enter_button.Name = "Enter_button";
-            this.Enter_button.Size = new System.Drawing.Size(82, 33);
+            this.Enter_button.Size = new System.Drawing.Size(133, 39);
             this.Enter_button.TabIndex = 5;
             this.Enter_button.Text = "Enter";
-            this.Enter_button.UseVisualStyleBackColor = true;
+            this.Enter_button.UseVisualStyleBackColor = false;
             this.Enter_button.Click += new System.EventHandler(this.Enter_button_Click);
             // 
             // Form1
