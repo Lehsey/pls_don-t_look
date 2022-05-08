@@ -33,22 +33,26 @@ namespace WinFormsApp1
             this.Restart_button = new System.Windows.Forms.Button();
             this.Cur_score = new System.Windows.Forms.Button();
             this.Max_score = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // GameField
             // 
             this.GameField.BackColor = System.Drawing.Color.LightGray;
-            this.GameField.Location = new System.Drawing.Point(0, 110);
+            this.GameField.Location = new System.Drawing.Point(0, 82);
+            this.GameField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GameField.Name = "GameField";
-            this.GameField.Size = new System.Drawing.Size(480, 365);
+            this.GameField.Size = new System.Drawing.Size(420, 274);
             this.GameField.TabIndex = 2;
             this.GameField.TabStop = true;
             // 
             // Restart_button
             // 
-            this.Restart_button.Location = new System.Drawing.Point(10, 10);
+            this.Restart_button.Location = new System.Drawing.Point(9, 8);
+            this.Restart_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Restart_button.Name = "Restart_button";
-            this.Restart_button.Size = new System.Drawing.Size(125, 90);
+            this.Restart_button.Size = new System.Drawing.Size(109, 68);
             this.Restart_button.TabIndex = 0;
             this.Restart_button.TabStop = false;
             this.Restart_button.Text = "Restart";
@@ -58,38 +62,62 @@ namespace WinFormsApp1
             // Cur_score
             // 
             this.Cur_score.Enabled = false;
-            this.Cur_score.Location = new System.Drawing.Point(210, 10);
+            this.Cur_score.Location = new System.Drawing.Point(183, 11);
+            this.Cur_score.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cur_score.Name = "Cur_score";
-            this.Cur_score.Size = new System.Drawing.Size(125, 90);
+            this.Cur_score.Size = new System.Drawing.Size(109, 65);
             this.Cur_score.TabIndex = 2;
-            this.Cur_score.Text = "Current score\r\n0\r\n";
+            this.Cur_score.Text = "\r\n0\r\n";
             this.Cur_score.UseVisualStyleBackColor = true;
             // 
             // Max_score
             // 
             this.Max_score.Enabled = false;
-            this.Max_score.Location = new System.Drawing.Point(341, 10);
+            this.Max_score.Location = new System.Drawing.Point(298, 11);
+            this.Max_score.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Max_score.Name = "Max_score";
-            this.Max_score.Size = new System.Drawing.Size(125, 90);
+            this.Max_score.Size = new System.Drawing.Size(109, 65);
             this.Max_score.TabIndex = 3;
-            this.Max_score.Text = "Max score\r\n0\r\n";
+            this.Max_score.Text = "0\r\n";
             this.Max_score.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(199, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Current score";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(323, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Max score";
             // 
             // Game_Window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(478, 475);
+            this.ClientSize = new System.Drawing.Size(418, 356);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Max_score);
             this.Controls.Add(this.Cur_score);
             this.Controls.Add(this.Restart_button);
             this.Controls.Add(this.GameField);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Game_Window";
             this.Text = "2048";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_Window_KeyDown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -99,5 +127,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button Cur_score;
         private System.Windows.Forms.Button Max_score;
         protected System.Windows.Forms.Button Restart_button;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

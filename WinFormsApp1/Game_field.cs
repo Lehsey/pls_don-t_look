@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinFormsApp1
 {
@@ -18,6 +19,7 @@ namespace WinFormsApp1
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private int BORDER_INTERVAL = 10;
         private Logick logick;
+        private int Max_Session_score = 0;
 
 
         public Game_Window(int _Width, int _Height)
@@ -36,7 +38,7 @@ namespace WinFormsApp1
             GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
             this.KeyPreview = true;
             UpdateField();
-            
+
         }
 
         private void UpdateField()
@@ -77,10 +79,13 @@ namespace WinFormsApp1
                 logick.try_move(false, false, false, true);
             }
             UpdateField();
+            ScoreOutput();
+            MaxScoreOutput();
             if (logick.Game_over() == true)
             {
                 Form1 newForm = new Form1(logick.GetScore());
                 newForm.Show();
+                GetMaxScore();
             }
         }
 
@@ -132,5 +137,28 @@ namespace WinFormsApp1
             return field_tiles;
         }
 
+        private void ScoreOutput()
+        {
+            string a = Convert.ToString(logick.GetScore());
+            Cur_score.Text = a;
+        }
+
+        private void GetMaxScore()
+        {
+            int s = logick.Session_score;
+            if (s > Max_Session_score)
+            Max_Session_score = s;
+            Max_score.Text = Convert.ToString(Max_Session_score);
+            StreamWriter p = new StreamWriter("Max_score.txt");
+            p.WriteLine(Max_score.Text);
+            p.Close();
+
+        }
+        private void MaxScoreOutput()
+        {
+            StreamReader p = new StreamReader("Max_score.txt");
+            Max_score.Text = p.ReadLine();
+            p.Close();
+        }
     }
 }

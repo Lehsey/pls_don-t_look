@@ -8,24 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\egorb\\.nuget\\packages\\": {},
-    "D:\\SDK\\NuGetPackages": {}
+    "C:\\Users\\egorb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Documents\\GitHub\\pls_don-t_look\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\egorb\\Documents\\GitHub\\pls_don-t_look\\WinFormsApp1\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "D:\\Users\\Documents\\GitHub\\pls_don-t_look\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectPath": "C:\\Users\\egorb\\Documents\\GitHub\\pls_don-t_look\\WinFormsApp1\\WinFormsApp1.csproj",
       "packagesPath": "C:\\Users\\egorb\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Documents\\GitHub\\pls_don-t_look\\WinFormsApp1\\obj\\",
+      "outputPath": "C:\\Users\\egorb\\Documents\\GitHub\\pls_don-t_look\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\SDK\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\egorb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -68,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }
