@@ -64,6 +64,7 @@ namespace WinFormsApp1
             this.Height_input.Size = new System.Drawing.Size(32, 27);
             this.Height_input.TabIndex = 2;
             this.Height_input.Text = "4";
+            this.Height_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Width_input
             // 
@@ -72,6 +73,7 @@ namespace WinFormsApp1
             this.Width_input.Size = new System.Drawing.Size(32, 27);
             this.Width_input.TabIndex = 3;
             this.Width_input.Text = "4";
+            this.Width_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             // 
             // label1
             // 
@@ -81,6 +83,7 @@ namespace WinFormsApp1
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Width";
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             // 
             // label2
             // 
@@ -90,12 +93,13 @@ namespace WinFormsApp1
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Height";
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(225, 481);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

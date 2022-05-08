@@ -49,6 +49,8 @@ namespace WinFormsApp1
             // 
             // Restart_button
             // 
+            this.Restart_button.BackColor = System.Drawing.Color.Yellow;
+            this.Restart_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Restart_button.Location = new System.Drawing.Point(9, 8);
             this.Restart_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Restart_button.Name = "Restart_button";
@@ -56,46 +58,54 @@ namespace WinFormsApp1
             this.Restart_button.TabIndex = 0;
             this.Restart_button.TabStop = false;
             this.Restart_button.Text = "Restart";
-            this.Restart_button.UseVisualStyleBackColor = true;
+            this.Restart_button.UseVisualStyleBackColor = false;
             this.Restart_button.Click += new System.EventHandler(this.Restart_button_Click);
             // 
             // Cur_score
             // 
+            this.Cur_score.BackColor = System.Drawing.Color.Green;
             this.Cur_score.Enabled = false;
-            this.Cur_score.Location = new System.Drawing.Point(183, 11);
+            this.Cur_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Cur_score.Location = new System.Drawing.Point(183, 8);
             this.Cur_score.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cur_score.Name = "Cur_score";
-            this.Cur_score.Size = new System.Drawing.Size(109, 65);
+            this.Cur_score.Size = new System.Drawing.Size(109, 68);
             this.Cur_score.TabIndex = 2;
             this.Cur_score.Text = "\r\n0\r\n";
-            this.Cur_score.UseVisualStyleBackColor = true;
+            this.Cur_score.UseVisualStyleBackColor = false;
             // 
             // Max_score
             // 
+            this.Max_score.BackColor = System.Drawing.Color.Green;
             this.Max_score.Enabled = false;
-            this.Max_score.Location = new System.Drawing.Point(298, 11);
+            this.Max_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Max_score.Location = new System.Drawing.Point(298, 8);
             this.Max_score.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Max_score.Name = "Max_score";
-            this.Max_score.Size = new System.Drawing.Size(109, 65);
+            this.Max_score.Size = new System.Drawing.Size(109, 68);
             this.Max_score.TabIndex = 3;
-            this.Max_score.Text = "0\r\n";
-            this.Max_score.UseVisualStyleBackColor = true;
+            this.Max_score.Text = "\r\n0\r\n";
+            this.Max_score.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 12);
+            this.label1.BackColor = System.Drawing.Color.Green;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Location = new System.Drawing.Point(197, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 15);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Current score";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(323, 11);
+            this.label2.BackColor = System.Drawing.Color.Green;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label2.Location = new System.Drawing.Point(322, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 15);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Max score";
             // 
@@ -104,7 +114,7 @@ namespace WinFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(418, 356);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

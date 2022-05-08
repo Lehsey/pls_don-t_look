@@ -48,7 +48,7 @@ namespace WinFormsApp1
             {
                 for (int j = 0; j < Width; j++)
                 {
-                    if (logick_block[i,j] == 0)
+                    if (logick_block[i, j] == 0)
                     {
                         Tiles[i, j].Text = "";
                     }
@@ -74,7 +74,7 @@ namespace WinFormsApp1
             {
                 logick.try_move(false, false, true, true);
             }
-            else if (e.KeyCode== Keys.D)
+            else if (e.KeyCode == Keys.D)
             {
                 logick.try_move(false, false, false, true);
             }
@@ -91,7 +91,7 @@ namespace WinFormsApp1
 
         private void Restart_button_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void RestartField()
@@ -147,13 +147,14 @@ namespace WinFormsApp1
         {
             int s = logick.Session_score;
             if (s > Max_Session_score)
-            Max_Session_score = s;
+                Max_Session_score = s;
             Max_score.Text = Convert.ToString(Max_Session_score);
             StreamWriter p = new StreamWriter("Max_score.txt");
             p.WriteLine(Max_score.Text);
             p.Close();
 
         }
+
         private void MaxScoreOutput()
         {
             StreamReader p = new StreamReader("Max_score.txt");
