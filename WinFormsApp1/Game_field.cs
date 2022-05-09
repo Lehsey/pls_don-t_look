@@ -20,7 +20,7 @@ namespace WinFormsApp1
         private int BORDER_INTERVAL = 10;
         private Logick logick;
         private int Max_Session_score = 0;
-
+        private Dictionary<Int32, Color> colors;
 
         public Game_Window(int _Width, int _Height)
         {
@@ -43,7 +43,9 @@ namespace WinFormsApp1
 
         private void UpdateField()
         {
+
             int[,] logick_block = logick.Get_Bloks();
+            Random random = new Random();
             for (int i = 0; i < Height; i++)
             {
                 for (int j = 0; j < Width; j++)
@@ -51,14 +53,25 @@ namespace WinFormsApp1
                     if (logick_block[i, j] == 0)
                     {
                         Tiles[i, j].Text = "";
+                        Tiles[i, j].BackColor = Color.WhiteSmoke;
+                        Tiles[i, j].Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold);
+                        continue;
                     }
                     else
-                    {
                         Tiles[i, j].Text = logick_block[i, j].ToString();
-                    }
+                    int power = 0;
+                    for (int number = logick.Common_value_gen; number < logick_block[i, j]; number += number, power++)
+                    { }
+                    colors = new Dictionary<Int32, Color>();
+                    if (colors.ContainsKey(power))
+                        Tiles[i, j].BackColor = colors[power];
+                    else
+                        Tiles[i, j].BackColor = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
+                    AdaptButtonFontSize(Tiles[i, j]);
                 }
             }
         }
+
 
         private void Game_Window_KeyDown(object sender, KeyEventArgs e)
         {
@@ -128,7 +141,9 @@ namespace WinFormsApp1
                 {
                     field_tiles[i, j] = new Button()
                     {
-                        Size = NORMAL_TILE_SIZE
+                        Size = NORMAL_TILE_SIZE,
+                        Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold),
+                        BackColor = Color.WhiteSmoke,
                     };
                 }
             }
@@ -160,6 +175,19 @@ namespace WinFormsApp1
             StreamReader p = new StreamReader("Max_score.txt");
             Max_score.Text = p.ReadLine();
             p.Close();
+        }
+
+        private void AdaptButtonFontSize(Button element, double fontSizePecrent = 0.85)
+        {
+            if (element == null) return;
+
+            Size original = element.Size;
+            Size textSize;
+            element.Font = new Font(element.Font.Name, 1, element.Font.Style);
+            while ((textSize = TextRenderer.MeasureText(element.Text, element.Font)).Width < element.ClientSize.Width * fontSizePecrent)
+            {
+                element.Font = new Font(element.Font.Name, element.Font.Size + 0.5f, element.Font.Style);
+            }
         }
     }
 }

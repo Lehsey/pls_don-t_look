@@ -39,7 +39,7 @@ namespace WinFormsApp1
             // 
             // GameField
             // 
-            this.GameField.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.GameField.Location = new System.Drawing.Point(0, 82);
             this.GameField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GameField.Name = "GameField";
