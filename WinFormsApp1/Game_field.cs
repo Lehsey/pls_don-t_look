@@ -94,8 +94,11 @@ namespace WinFormsApp1
             UpdateField();
             ScoreOutput();
             MaxScoreOutput();
+            Update();
             if (logick.Game_over() == true)
             {
+                this.KeyPreview = false;
+                Restart_button.Focus();
                 Form1 newForm = new Form1(logick.GetScore());
                 newForm.Show();
                 GetMaxScore();
@@ -104,11 +107,16 @@ namespace WinFormsApp1
 
         private void Restart_button_Click(object sender, EventArgs e)
         {
-
+            RestartField();
         }
 
         private void RestartField()
         {
+            logick = new Logick(Width, Height);
+            UpdateField();
+            ScoreOutput();
+            this.KeyPreview = true;
+
         }
 
 

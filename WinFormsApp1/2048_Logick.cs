@@ -28,6 +28,7 @@ namespace WinFormsApp1
                 }
             }
             Generate_new_blok();
+            Generate_new_blok();
         }
 
         public int[,] Get_Bloks()
@@ -109,7 +110,7 @@ namespace WinFormsApp1
             {
                 for (int j = 0; j < Width - 1; j++)
                 {
-                    if ((!Free_space()) && ((Bloks[i,j] != Bloks[i + 1, j]) && (Bloks[i, j] != Bloks[i, j + 1])) )
+                    if ((Free_space()) | (Bloks[i,j] == Bloks[i + 1, j]) | (Bloks[i, j] == Bloks[i, j + 1]))
                     {
                         return false;
                     }
