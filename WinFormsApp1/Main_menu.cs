@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Diagnostics;
 
 namespace WinFormsApp1
 {
@@ -45,12 +43,8 @@ namespace WinFormsApp1
 
         private void Score_button_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            ProcessStartInfo ps = new ProcessStartInfo();
-            ps.FileName = "NotePad.exe";
-            ps.Arguments = "Scores_list.txt";
-            p.StartInfo = ps;
-            p.Start();
+            ScoresList newForm = new ScoresList();
+            newForm.Show();
         }
     }
 }

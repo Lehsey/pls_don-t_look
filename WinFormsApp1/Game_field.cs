@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using WinFormsApp1.Properties;
 
 namespace WinFormsApp1
 {
@@ -19,7 +20,7 @@ namespace WinFormsApp1
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private int BORDER_INTERVAL = 10;
         private Logick logick;
-        private int Max_Session_score = 0;
+        private int Max_Session_score;
         private Dictionary<Int32, Color> colors;
 
         public Game_Window(int _Width, int _Height)
@@ -37,6 +38,7 @@ namespace WinFormsApp1
             this.Size = new Size(TILE_INTERVALS * 4 + GameField.Width, TILE_INTERVALS * 8 + GameField.Height + Restart_button.Height);
             GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
             this.KeyPreview = true;
+            MaxScoreOutput();
             UpdateField();
 
         }
@@ -93,7 +95,6 @@ namespace WinFormsApp1
             }
             UpdateField();
             ScoreOutput();
-            MaxScoreOutput();
             Update();
             if (logick.Game_over() == true)
             {
@@ -163,27 +164,23 @@ namespace WinFormsApp1
 
         private void ScoreOutput()
         {
-            string a = Convert.ToString(logick.GetScore());
-            Cur_score.Text = a;
+            Cur_score.Text = Convert.ToString(logick.GetScore());
         }
 
         private void GetMaxScore()
         {
-            int s = logick.Session_score;
-            if (s > Max_Session_score)
-                Max_Session_score = s;
+            if (logick.GetScore() > Max_Session_score)
+                Max_Session_score = logick.GetScore();
+            Settings.Default["MaxScoreInt"] = Max_Session_score;
+            Settings.Default.Save();
             Max_score.Text = Convert.ToString(Max_Session_score);
-            StreamWriter p = new StreamWriter("Max_score.txt");
-            p.WriteLine(Max_score.Text);
-            p.Close();
-
+            Settings.Default["MaxScore"] = Max_score.Text;
+            Settings.Default.Save();
         }
 
         private void MaxScoreOutput()
         {
-            StreamReader p = new StreamReader("Max_score.txt");
-            Max_score.Text = p.ReadLine();
-            p.Close();
+            Max_score.Text = Settings.Default["MaxScore"].ToString();
         }
 
         private void AdaptButtonFontSize(Button element, double fontSizePecrent = 0.85)
