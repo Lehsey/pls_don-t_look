@@ -169,10 +169,9 @@ namespace WinFormsApp1
 
         private void GetMaxScore()
         {
+            Max_Session_score = Convert.ToInt32(Max_score.Text);
             if (logick.GetScore() > Max_Session_score)
                 Max_Session_score = logick.GetScore();
-            Settings.Default["MaxScoreInt"] = Max_Session_score;
-            Settings.Default.Save();
             Max_score.Text = Convert.ToString(Max_Session_score);
             Settings.Default["MaxScore"] = Max_score.Text;
             Settings.Default.Save();

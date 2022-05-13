@@ -8,10 +8,10 @@
     <Setting Name="Setting" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="MaxScoreInt" Type="System.Int32" Scope="User">
+    <Setting Name="ScoresTable" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Setting1" Type="System.Int32" Scope="User">
+    <Setting Name="Setting1" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

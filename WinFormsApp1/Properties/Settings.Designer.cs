@@ -49,20 +49,22 @@ namespace WinFormsApp1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int MaxScoreInt {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ScoresTable {
             get {
-                return ((int)(this["MaxScoreInt"]));
+                return ((string)(this["ScoresTable"]));
             }
             set {
-                this["MaxScoreInt"] = value;
+                this["ScoresTable"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Setting1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Setting1 {
             get {
-                return ((int)(this["Setting1"]));
+                return ((string)(this["Setting1"]));
             }
             set {
                 this["Setting1"] = value;

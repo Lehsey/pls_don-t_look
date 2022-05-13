@@ -31,17 +31,17 @@ namespace WinFormsApp1
       
         private void ScoresList_Load(object sender, EventArgs e)
         {
+            int i;
             players.Add(new Player(DataBank.name1, DataBank.score1));
 
             DataTable table = new DataTable();
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Score", typeof(string));
 
-            for (int i = 0; i < players.Count; i++)
+            for (i = 0; i < players.Count; i++)
             {
                 table.Rows.Add(players[i].name, players[i].score);
             }
-
             dataGridView1.DataSource = table;
 
         }
