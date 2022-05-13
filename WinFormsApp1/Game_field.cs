@@ -7,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinFormsApp1
 {
     public partial class Game_Window : Form
     {
         private int Width, Height;
-        private int Curr_score, Best_score;
         private Button[,] Tiles;
         private int TILE_INTERVALS = 10;
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private int BORDER_INTERVAL = 10;
         private Logick logick;
-
+        private int Max_Session_score = 0;
+        private Dictionary<Int32, Color> colors;
 
         public Game_Window(int _Width, int _Height)
         {
@@ -37,27 +38,40 @@ namespace WinFormsApp1
             GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
             this.KeyPreview = true;
             UpdateField();
-            
+
         }
 
         private void UpdateField()
         {
+
             int[,] logick_block = logick.Get_Bloks();
+            Random random = new Random();
             for (int i = 0; i < Height; i++)
             {
                 for (int j = 0; j < Width; j++)
                 {
-                    if (logick_block[i,j] == 0)
+                    if (logick_block[i, j] == 0)
                     {
                         Tiles[i, j].Text = "";
+                        Tiles[i, j].BackColor = Color.WhiteSmoke;
+                        Tiles[i, j].Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold);
+                        continue;
                     }
                     else
-                    {
                         Tiles[i, j].Text = logick_block[i, j].ToString();
-                    }
+                    int power = 0;
+                    for (int number = logick.Common_value_gen; number < logick_block[i, j]; number += number, power++)
+                    { }
+                    colors = new Dictionary<Int32, Color>();
+                    if (colors.ContainsKey(power))
+                        Tiles[i, j].BackColor = colors[power];
+                    else
+                        Tiles[i, j].BackColor = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
+                    AdaptButtonFontSize(Tiles[i, j]);
                 }
             }
         }
+
 
         private void Game_Window_KeyDown(object sender, KeyEventArgs e)
         {
@@ -73,21 +87,24 @@ namespace WinFormsApp1
             {
                 logick.try_move(false, false, true, true);
             }
-            else if (e.KeyCode== Keys.D)
+            else if (e.KeyCode == Keys.D)
             {
                 logick.try_move(false, false, false, true);
             }
             UpdateField();
+            ScoreOutput();
+            MaxScoreOutput();
             if (logick.Game_over() == true)
             {
-                Form1 newForm = new Form1();
+                Form1 newForm = new Form1(logick.GetScore());
                 newForm.Show();
+                GetMaxScore();
             }
         }
 
         private void Restart_button_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void RestartField()
@@ -124,7 +141,9 @@ namespace WinFormsApp1
                 {
                     field_tiles[i, j] = new Button()
                     {
-                        Size = NORMAL_TILE_SIZE
+                        Size = NORMAL_TILE_SIZE,
+                        Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold),
+                        BackColor = Color.WhiteSmoke,
                     };
                 }
             }
@@ -133,5 +152,42 @@ namespace WinFormsApp1
             return field_tiles;
         }
 
+        private void ScoreOutput()
+        {
+            string a = Convert.ToString(logick.GetScore());
+            Cur_score.Text = a;
+        }
+
+        private void GetMaxScore()
+        {
+            int s = logick.Session_score;
+            if (s > Max_Session_score)
+                Max_Session_score = s;
+            Max_score.Text = Convert.ToString(Max_Session_score);
+            StreamWriter p = new StreamWriter("Max_score.txt");
+            p.WriteLine(Max_score.Text);
+            p.Close();
+
+        }
+
+        private void MaxScoreOutput()
+        {
+            StreamReader p = new StreamReader("Max_score.txt");
+            Max_score.Text = p.ReadLine();
+            p.Close();
+        }
+
+        private void AdaptButtonFontSize(Button element, double fontSizePecrent = 0.85)
+        {
+            if (element == null) return;
+
+            Size original = element.Size;
+            Size textSize;
+            element.Font = new Font(element.Font.Name, 1, element.Font.Style);
+            while ((textSize = TextRenderer.MeasureText(element.Text, element.Font)).Width < element.ClientSize.Width * fontSizePecrent)
+            {
+                element.Font = new Font(element.Font.Name, element.Font.Size + 0.5f, element.Font.Style);
+            }
+        }
     }
 }

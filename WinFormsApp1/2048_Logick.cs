@@ -10,9 +10,9 @@ namespace WinFormsApp1
     {
         private int[,] Bloks;
         private int Width, Height;
-        private int Common_value_gen = 2;
+        public int Common_value_gen = 2;
         private int Rare_value_gen = 4;
-        private int Session_score = 0;
+        public int Session_score = 0;
 
 
         public Logick(int _width, int _height)
