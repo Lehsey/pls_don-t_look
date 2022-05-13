@@ -115,6 +115,7 @@ namespace WinFormsApp1
             logick = new Logick(Width, Height);
             UpdateField();
             ScoreOutput();
+            MaxScoreOutput();
             this.KeyPreview = true;
 
         }
