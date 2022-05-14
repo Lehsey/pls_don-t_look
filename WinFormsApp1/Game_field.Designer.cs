@@ -39,7 +39,6 @@ namespace WinFormsApp1
             // 
             // GameField
             // 
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.GameField.Location = new System.Drawing.Point(0, 82);
             this.GameField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GameField.Name = "GameField";
@@ -71,7 +70,7 @@ namespace WinFormsApp1
             this.Cur_score.Name = "Cur_score";
             this.Cur_score.Size = new System.Drawing.Size(109, 68);
             this.Cur_score.TabIndex = 2;
-            this.Cur_score.Text = "\r\n0\r\n";
+            this.Cur_score.Text = "0";
             this.Cur_score.UseVisualStyleBackColor = false;
             // 
             // Max_score
@@ -84,7 +83,7 @@ namespace WinFormsApp1
             this.Max_score.Name = "Max_score";
             this.Max_score.Size = new System.Drawing.Size(109, 68);
             this.Max_score.TabIndex = 3;
-            this.Max_score.Text = "\r\n0\r\n";
+            this.Max_score.Text = "0";
             this.Max_score.UseVisualStyleBackColor = false;
             // 
             // label1

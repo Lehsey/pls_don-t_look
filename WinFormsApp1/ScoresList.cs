@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1.Properties;
 
 namespace WinFormsApp1
 {
@@ -28,23 +29,24 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
-      
+
         private void ScoresList_Load(object sender, EventArgs e)
         {
-            int i;
+            int i = 0;
             players.Add(new Player(DataBank.name1, DataBank.score1));
 
-            DataTable table = new DataTable();
+            DataTable table = new();
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Score", typeof(string));
 
-            for (i = 0; i < players.Count; i++)
+            while (i != players.Count)
             {
                 table.Rows.Add(players[i].name, players[i].score);
+                i++;
             }
             dataGridView1.DataSource = table;
-
         }
+
     }
     public static class DataBank
     {

@@ -25,7 +25,7 @@ namespace WinFormsApp1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public string MaxScore {
             get {
                 return ((string)(this["MaxScore"]));
@@ -37,7 +37,7 @@ namespace WinFormsApp1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public string Setting {
             get {
                 return ((string)(this["Setting"]));
@@ -49,13 +49,13 @@ namespace WinFormsApp1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ScoresTable {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string i {
             get {
-                return ((string)(this["ScoresTable"]));
+                return ((string)(this["i"]));
             }
             set {
-                this["ScoresTable"] = value;
+                this["i"] = value;
             }
         }
         
