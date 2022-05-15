@@ -8,6 +8,7 @@ namespace WinFormsApp1
 {
     public class Logick
     {
+        
         private int[,] Bloks;
         private int Width, Height;
         public int Common_value_gen = 2;
