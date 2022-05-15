@@ -10,8 +10,5 @@
     <Compile Update="Main_menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScoresList.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

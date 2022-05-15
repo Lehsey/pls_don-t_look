@@ -43,7 +43,7 @@ namespace WinFormsApp1
 
         private void Score_button_Click(object sender, EventArgs e)
         {
-            ScoresList newForm = new ScoresList();
+            Form1 newForm = new Form1(1);
             newForm.Show();
         }
     }

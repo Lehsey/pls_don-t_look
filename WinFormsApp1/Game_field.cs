@@ -40,7 +40,6 @@ namespace WinFormsApp1
             this.KeyPreview = true;
             MaxScoreOutput();
             UpdateField();
-
         }
 
         private void UpdateField()
@@ -100,9 +99,9 @@ namespace WinFormsApp1
             {
                 this.KeyPreview = false;
                 Restart_button.Focus();
+                GetMaxScore();
                 Form1 newForm = new Form1(logick.GetScore());
                 newForm.Show();
-                GetMaxScore();
             }
         }
 
