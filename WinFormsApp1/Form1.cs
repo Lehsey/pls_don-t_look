@@ -21,9 +21,8 @@ namespace WinFormsApp1
         }
         private void Enter_button_Click(object sender, EventArgs e)
         {
-            DataBank.name1 = Convert.ToString(Name_input.Text);
-            DataBank.score1 = score;
-            Close();
+            name = Convert.ToString(Name_input.Text);
+            dataGridView1.Rows.Add(name, score);
         }
     }
 }
