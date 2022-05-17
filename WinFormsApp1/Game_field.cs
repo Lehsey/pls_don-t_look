@@ -94,6 +94,7 @@ namespace WinFormsApp1
             }
             UpdateField();
             ScoreOutput();
+            MaxScoreOutput();
             Update();
             if (logick.Game_over() == true)
             {
