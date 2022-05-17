@@ -38,6 +38,7 @@ namespace WinFormsApp1
             this.Size = new Size(TILE_INTERVALS * 4 + GameField.Width, TILE_INTERVALS * 8 + GameField.Height + Restart_button.Height);
             GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
             this.KeyPreview = true;
+            GetMaxScore();
             MaxScoreOutput();
             UpdateField();
         }
@@ -94,6 +95,7 @@ namespace WinFormsApp1
             }
             UpdateField();
             ScoreOutput();
+            GetMaxScore();
             MaxScoreOutput();
             Update();
             if (logick.Game_over() == true)
