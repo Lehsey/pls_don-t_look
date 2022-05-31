@@ -178,7 +178,6 @@ namespace WinFormsApp1
         {
             if (element == null) return;
 
-            Size original = element.Size;
             Size textSize;
             element.Font = new Font(element.Font.Name, 1, element.Font.Style);
             while ((textSize = TextRenderer.MeasureText(element.Text, element.Font)).Width < element.ClientSize.Width * fontSizePecrent)
