@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinFormsApp1
 {
@@ -22,7 +23,10 @@ namespace WinFormsApp1
         private void Enter_button_Click(object sender, EventArgs e)
         {
             name = Convert.ToString(Name_input.Text);
-            dataGridView1.Rows.Add(name, score);
+            File.AppendAllText("Scores_list.txt", name + " ");
+            File.AppendAllText("Scores_list.txt", score);
+            File.AppendAllText("Scores_list.txt", "\r\n");
+            Close();
         }
     }
 }

@@ -21,7 +21,6 @@ namespace WinFormsApp1
         private int BORDER_INTERVAL = 10;
         private Logick logick;
         private int Max_Session_score;
-        private Dictionary<Int32, Color> colors;
 
         public Game_Window(int _Width, int _Height)
         {
@@ -60,14 +59,7 @@ namespace WinFormsApp1
                     }
                     else
                         Tiles[i, j].Text = logick_block[i, j].ToString();
-                    int power = 0;
-                    for (int number = logick.Common_value_gen; number < logick_block[i, j]; number += number, power++)
-                    { }
-                    colors = new Dictionary<Int32, Color>();
-                    if (colors.ContainsKey(power))
-                        Tiles[i, j].BackColor = colors[power];
-                    else
-                        Tiles[i, j].BackColor = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
+                    Tiles[i, j].BackColor = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                     AdaptButtonFontSize(Tiles[i, j]);
                 }
             }
@@ -94,6 +86,7 @@ namespace WinFormsApp1
             }
             UpdateField();
             ScoreOutput();
+            GetMaxScore();
             Update();
             if (logick.Game_over() == true)
             {
