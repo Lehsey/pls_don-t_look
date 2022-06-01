@@ -35,6 +35,7 @@ namespace WinFormsApp1
             this.Width_input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Notify = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Start_button
@@ -99,12 +100,22 @@ namespace WinFormsApp1
             this.label2.TabIndex = 5;
             this.label2.Text = "Height >= 4";
             // 
+            // Notify
+            // 
+            this.Notify.AutoSize = true;
+            this.Notify.Location = new System.Drawing.Point(60, 95);
+            this.Notify.Name = "Notify";
+            this.Notify.Size = new System.Drawing.Size(0, 20);
+            this.Notify.TabIndex = 6;
+            this.Notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(225, 481);
+            this.Controls.Add(this.Notify);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Width_input);
@@ -125,5 +136,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.TextBox Width_input;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label Notify;
     }
 }
