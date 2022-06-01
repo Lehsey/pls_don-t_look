@@ -21,9 +21,9 @@ namespace WinFormsApp1
 
         private void Scores_list_Load(object sender, EventArgs e)
         {
-            foreach (var line in File.ReadLines("Scores_list.txt"))
+            foreach (string line in File.ReadLines("Scores_list.txt"))
             {
-                var array = line.Split();
+                string[] array = line.Split();
                 dataGridView1.Rows.Add(array);
             }
         }
