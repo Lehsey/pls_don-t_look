@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Windows.Forms;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.IO;
 using WinFormsApp1.Properties;
 
@@ -15,8 +15,6 @@ namespace WinFormsApp1
     public partial class Game_Window : Form
     {
         private int Width, Height;
-        private int Screen_width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
-        private int Screen_Height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
         private Button[,] Tiles;
         private int TILE_INTERVALS = 10;
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
