@@ -123,3 +123,6 @@ G:\!ВАЖНОЕ\Cods\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\ref\W
 D:\Users\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
 D:\Users\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
 D:\Users\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.Scores_list.resources
+C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
+C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.Scores_list.resources
