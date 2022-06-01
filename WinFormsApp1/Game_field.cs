@@ -17,8 +17,6 @@ namespace WinFormsApp1
         private int Width, Height;
         private Button[,] Tiles;
         private int TILE_INTERVALS = 10;
-        private int Screen_height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
-        private int Screen_width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private int BORDER_INTERVAL = 10;
         private Logick logick;
@@ -34,10 +32,6 @@ namespace WinFormsApp1
             Height = _Height;
             logick = new Logick(Width, Height);
             InitializeComponent();
-            if (Screen_height - (Height * (NORMAL_TILE_SIZE.Height + TILE_INTERVALS) + TILE_INTERVALS) <= 80)
-            {
-                NORMAL_TILE_SIZE = new Size(Screen_height / Height, Screen_height / Height);
-            }
             GameField.Size = new Size(Width * (NORMAL_TILE_SIZE.Width + TILE_INTERVALS) + TILE_INTERVALS, Height * (NORMAL_TILE_SIZE.Height + TILE_INTERVALS) + TILE_INTERVALS);
             CreateField();
             this.Size = new Size(TILE_INTERVALS * 4 + GameField.Width, TILE_INTERVALS * 8 + GameField.Height + Restart_button.Height);
