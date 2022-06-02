@@ -17,8 +17,12 @@ namespace WinFormsApp1
         private int Width, Height;
         private Button[,] Tiles;
         private int TILE_INTERVALS = 10;
+        private Size DEFOULT_WINDOW_SIZE = new Size(500, 530);
         private Size NORMAL_TILE_SIZE = new Size(100, 100);
         private int BORDER_INTERVAL = 10;
+        private int UP_BAR_SIZE = 40;
+        private int Screen_height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+        private int Screen_width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
         private Logick logick;
         private int Max_Session_score;
 
@@ -32,11 +36,27 @@ namespace WinFormsApp1
             Height = _Height;
             logick = new Logick(Width, Height);
             InitializeComponent();
+            if (Screen_height - (Height * (NORMAL_TILE_SIZE.Height + TILE_INTERVALS) + TILE_INTERVALS) <= NORMAL_TILE_SIZE.Height + TILE_INTERVALS + BORDER_INTERVAL)
+            {
+                int new_sqr = (Screen_height - BORDER_INTERVAL * 6 - (TILE_INTERVALS * Height + 2) - Cur_score.Height) / Height;
+                TILE_INTERVALS = 5;
+                NORMAL_TILE_SIZE = new Size(new_sqr, new_sqr);
+            }
+            if (Screen_width - (Width * (NORMAL_TILE_SIZE.Width + TILE_INTERVALS) + TILE_INTERVALS) <= NORMAL_TILE_SIZE.Height + TILE_INTERVALS + BORDER_INTERVAL)
+            {
+                int new_sqr = (Screen_width - BORDER_INTERVAL * 2 - (TILE_INTERVALS * Width + 2)) / Width;
+                TILE_INTERVALS = 5;
+                NORMAL_TILE_SIZE = new Size(new_sqr, new_sqr);
+            }
             GameField.Size = new Size(Width * (NORMAL_TILE_SIZE.Width + TILE_INTERVALS) + TILE_INTERVALS, Height * (NORMAL_TILE_SIZE.Height + TILE_INTERVALS) + TILE_INTERVALS);
             CreateField();
-            this.Size = new Size(TILE_INTERVALS * 4 + GameField.Width, TILE_INTERVALS * 8 + GameField.Height + Restart_button.Height);
+            this.Size = new Size(TILE_INTERVALS * 2 + GameField.Width + BORDER_INTERVAL*2, TILE_INTERVALS * 6 + GameField.Height + Restart_button.Height + UP_BAR_SIZE);
             GameField.Location = new Point(BORDER_INTERVAL, BORDER_INTERVAL * 2 + Restart_button.Height);
             this.KeyPreview = true;
+            if(this.Size.Width < DEFOULT_WINDOW_SIZE.Width)
+            {
+                this.Size = new Size(DEFOULT_WINDOW_SIZE.Width, this.Size.Height);
+            }
             MaxScoreOutput();
             UpdateField();
         }
