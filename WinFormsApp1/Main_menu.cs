@@ -31,8 +31,8 @@ namespace WinFormsApp1
                     GameField = new Game_Window(width, height);
                     GameField.Show();
                 }
-                
-
+                else
+                    Notify.Text = ("Enter correct" + "\r\n" + "field size");
             }
             catch
             {
