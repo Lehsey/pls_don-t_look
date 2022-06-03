@@ -26,7 +26,7 @@ namespace WinFormsApp1
             {
                 width = Convert.ToInt32(Width_input.Text);
                 height = Convert.ToInt32(Height_input.Text);
-                if (width >= 4 && height >= 4)
+                if ((width >= 4 && height >= 4))
                 {
                     GameField = new Game_Window(width, height);
                     GameField.Show();
@@ -36,7 +36,7 @@ namespace WinFormsApp1
             }
             catch
             {
-
+                Notify.Text = ("Enter correct" + "\r\n" + "field size");
             }
 
         }
