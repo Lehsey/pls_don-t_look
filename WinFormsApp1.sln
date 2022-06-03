@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{E064A102-4C71-424F-9B4D-A448239E9936}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "2048", "2048\2048.vdproj", "{78AD390D-341D-44BE-8D5E-A5D3C7B22696}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_2048", "Setup_2048\Setup_2048.vdproj", "{D5D40C15-D961-4453-ACE9-986891231ED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,8 @@ Global
 		{E064A102-4C71-424F-9B4D-A448239E9936}.Release|Any CPU.Build.0 = Release|Any CPU
 		{78AD390D-341D-44BE-8D5E-A5D3C7B22696}.Debug|Any CPU.ActiveCfg = Debug
 		{78AD390D-341D-44BE-8D5E-A5D3C7B22696}.Release|Any CPU.ActiveCfg = Release
+		{D5D40C15-D961-4453-ACE9-986891231ED1}.Debug|Any CPU.ActiveCfg = Debug
+		{D5D40C15-D961-4453-ACE9-986891231ED1}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
