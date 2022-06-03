@@ -56,13 +56,6 @@ D:\Users\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\W
 D:\Users\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\ref\WinFormsApp1.dll
 D:\Users\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.pdb
 D:\Users\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.genruntimeconfig.cache
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.exe
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.deps.json
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.runtimeconfig.json
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.runtimeconfig.dev.json
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.dll
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\ref\WinFormsApp1.dll
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.pdb
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.Form1.resources
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.Game_Window.resources
@@ -72,9 +65,6 @@ C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-win
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfo.cs
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.dll
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\ref\WinFormsApp1.dll
-C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.pdb
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.exe
 C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\WinFormsApp1.deps.json
@@ -127,3 +117,13 @@ C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\obj\
 C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
 C:\Users\Lahas\OneDrive\Документы\CODE\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.Scores_list.resources
 C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.Scores_list.resources
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\2048.exe
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\2048.deps.json
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\2048.runtimeconfig.json
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\2048.runtimeconfig.dev.json
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\2048.dll
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\ref\2048.dll
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\bin\Debug\net5.0-windows\2048.pdb
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\2048.dll
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\ref\2048.dll
+C:\Users\egorb\Documents\GitHub\pls_don-t_look\WinFormsApp1\obj\Debug\net5.0-windows\2048.pdb

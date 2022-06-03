@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "WinFormsApp1/1.0.0": {
+      "2048/1.0.0": {
         "runtime": {
-          "WinFormsApp1.dll": {}
+          "2048.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "WinFormsApp1/1.0.0": {
+    "2048/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
